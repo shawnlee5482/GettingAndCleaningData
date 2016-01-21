@@ -1,14 +1,11 @@
 Full data set consists of two files
 
-"mean_std_by_activity.txt": measurement statistics grouped by activity name
-"mean_std_by_subject.txt": measurement statistics grouped by subject(user)
+"mean_std.txt": measurement statistics grouped by activity name and subject(user)
  
 ** UNITS **
 Acc: m/sec2
 Jerk: m/sec3
 Gyro: radians/sec
-
-1) mean_std_by_activity.txt
 
 This file contains mean and standard deviation values of measurement grouped by activity names
 prefix 't' means time domain data while 'f' means frequency domain analysis (FFT)
@@ -87,8 +84,5 @@ fBodyAccJerkMag-	Frequency domain mean/standard value for Body Acc Jerk Magnitue
 fBodyAccGyroMag-	Frequency domain mean/standard value for Body Acc Gyro Magnitue
 fBodyAccGyroJerkMag-	Frequency domain mean/standard value for Body Acc Gyro Jerk Magnitue
 
-
-2. mean_std_by_subject
-variable fields are same as 'mean_std_by_activity'
 'subject' column means the assigned number for the user.
 The number is between 1 and 30
