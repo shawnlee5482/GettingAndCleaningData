@@ -64,16 +64,9 @@ for(i in 1:nrow(activity_labels)) {
 # data summarize and generate table
 library(dplyr)
 data_summarized_activity <- selected_data %>%
-  group_by(activity) %>%
+  group_by(activity, subject) %>%
   summarise_each(funs(mean))
-data_summarized_activity <- select(data_summarized_activity, - subject)
+# data_summarized_activity <- select(data_summarized_activity, - subject)
 View(data_summarized_activity)
-write.table(data_summarized_activity, file="mean_std_by_activity.txt", row.name=FALSE, eol="\r\n")
-
-# my_test <- read.table("mean_std_by_activity.txt", stringsAsFactors = FALSE)
-# View(my_test)
-data_summarized_subject <- select(selected_data, -activity) %>%
-  group_by(subject) %>% 
-  summarise_each(funs(mean))
-View(data_summarized_subject)
-write.table(data_summarized_subject, file="mean_std_by_subject.txt", row.name=FALSE, eol="\r\n")
+#write.table(data_summarized_activity, file="mean_std_by_activity.txt", row.name=FALSE, eol="\r\n")
+write.table(data_summarized_activity, file="mean_std.txt", row.name=FALSE, eol="\r\n")
