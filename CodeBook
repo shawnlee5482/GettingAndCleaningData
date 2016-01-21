@@ -2,6 +2,14 @@ Full data set consists of two files
 
 "mean_std.txt": measurement statistics grouped by activity name and subject(user)
  
+Activity: 
+The first column 'activity' means what activity user did during the test
+It is one value among 'LAYING', 'SITTING', 'STANDING', 'WALKING', 'WALKING_DOWNSTAIRS', 'WALKING_UPSTAIRS'
+
+subject: 
+this column means the assigned number for the user.
+The number is between 1 and 30
+
 ** UNITS **
 Acc: m/sec2
 Jerk: m/sec3
@@ -10,11 +18,7 @@ Gyro: radians/sec
 This file contains mean and standard deviation values of measurement grouped by activity names
 prefix 't' means time domain data while 'f' means frequency domain analysis (FFT)
 
-a) row name
-The first column 'activity' means what activity user did during the test
-It is one value among 'LAYING', 'SITTING', 'STANDING', 'WALKING', 'WALKING_DOWNSTAIRS', 'WALKING_UPSTAIRS'
-
-b) Time domain Variables
+a) Time domain Variables
 
 tBodyAcc-mean()-X	mean value of body accleration for X, Y, Z axis
 tBodyAcc-mean()-Y
@@ -70,7 +74,7 @@ tBodyGyroMag-std() 	Body gyro magnitude standard deviation value
 tBodyGyroJerkMag-mean() Body gyro jerk magnitude mean value
 tBodyGyroJerkMag-std() 	Body gyro jerk magnitude standard deviation value
  
-c) Frequency domain data
+b) Frequency domain data
 fBodyAcc-mean()-X, Y, Z	Frequency domain mean for Body Acc for X, Y, Z axis
 fBodyAcc-std()-X, Y, Z	Frequency domain standard deviation for Body Acc for X, Y, Z axis
 
@@ -84,5 +88,4 @@ fBodyAccJerkMag-	Frequency domain mean/standard value for Body Acc Jerk Magnitue
 fBodyAccGyroMag-	Frequency domain mean/standard value for Body Acc Gyro Magnitue
 fBodyAccGyroJerkMag-	Frequency domain mean/standard value for Body Acc Gyro Jerk Magnitue
 
-'subject' column means the assigned number for the user.
-The number is between 1 and 30
+
