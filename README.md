@@ -64,23 +64,13 @@ Alaysis performed by following steps
 
 5) Generate table by gouping activity and subject
 		'dplyr' library is used for ease of manipulation
-		for each group, we calculate average value
-
 		library(dplyr)
-		# for subject group
 		data_summarized_activity <- selected_data %>%
-  		group_by(activity) %>%
+  		group_by(activity, subject) %>%
   		summarise_each(funs(mean))
-		data_summarized_activity <- select(data_summarized_activity, - subject)
-
-		# for activity group
+		# data_summarized_activity <- select(data_summarized_activity, - subject)
 		View(data_summarized_activity)
-		data_summarized_subject <- select(selected_data, -activity) %>%
-  		group_by(subject) %>% 
-  		summarise_each(funs(mean))
-		View(data_summarized_subject)
 
 6) Writing table out
 		write.table(data_summarized_activity, file="mean_std.txt", row.name=FALSE, eol="\r\n")
-		write.table(data_summarized_subject, append=TRUE, file="mean_std.txt", row.name=FALSE, eol="\r\n")
 
