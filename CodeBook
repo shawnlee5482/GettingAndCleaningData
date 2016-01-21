@@ -2,7 +2,12 @@ Full data set consists of two files
 
 "mean_std_by_activity.txt": measurement statistics grouped by activity name
 "mean_std_by_subject.txt": measurement statistics grouped by subject(user)
-  
+ 
+** UNITS **
+Acc: m/sec2
+Jerk: m/sec3
+Gyro: radians/sec
+
 1) mean_std_by_activity.txt
 
 This file contains mean and standard deviation values of measurement grouped by activity names
