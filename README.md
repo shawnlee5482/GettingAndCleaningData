@@ -5,8 +5,7 @@ This file explains the analysis performed on the data collected by experiment fo
 Generated output contains
 
 - mean value for the selected variables grouped by Activity and Subject
-- 'mean_std_by_activity.txt' contains analysis result for each activity group
-- 'mean_std_by_subject.txt' contains analysis result for each tester
+- 'mean_std.txt' contains analysis result for each activity group and each tester
 
 * For the detailed explanation of each varaible, please refer to codebook
 
@@ -82,5 +81,6 @@ Alaysis performed by following steps
 		View(data_summarized_subject)
 
 6) Writing table out
-		write.table(data_summarized_activity, file="mean_std_by_activity.txt", row.name=FALSE, eol="\r\n")
-		write.table(data_summarized_subject, file="mean_std_by_subject.txt", row.name=FALSE, eol="\r\n")
+		write.table(data_summarized_activity, file="mean_std.txt", row.name=FALSE, eol="\r\n")
+		write.table(data_summarized_subject, append=TRUE, file="mean_std.txt", row.name=FALSE, eol="\r\n")
+
